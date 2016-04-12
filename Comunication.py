@@ -1,4 +1,3 @@
-from builtins import print
 
 from Utility import *
 import threading
@@ -45,7 +44,7 @@ class Sender:
 
             sock.connect((a, int(self.port)))
             print('inviato a ' + a + ' : ' + self.messaggio)
-            sock.sendall(self.messaggio.encode())
+            sock.send(self.messaggio.encode())
             sock.close()
         except Exception as e:
             print("Errore Peer down " + self.ip + " " + self.port)

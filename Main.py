@@ -1,4 +1,4 @@
-from Communication import *
+from Comunication import *
 from Server import *
 from Utility import *
 import os

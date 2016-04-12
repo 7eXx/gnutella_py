@@ -1,5 +1,5 @@
 from Utility import *
-from Communication import *
+from Comunication import *
 from Parser import *
 import asyncore
 import logging
@@ -143,7 +143,7 @@ class ReceiveHandler(asyncore.dispatcher):
                         msg="NEAR"+pkID+ipDest+portDest+ttl
                         lista=Utility.database.listClient()
                         if len(lista)>0:
-                            t1 = SenderAll(msg,lista )
+                            t1 = SenderAll(msg,lista)
                             t1.run()
 
             elif command=="ANEA":
